@@ -1,0 +1,270 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Basic Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 2rem;
+}
+
+::selection{
+    background-color: #02ac7b;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #282C38;
+    color: white;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 25px;
+}
+
+/* Header Styling */
+
+header{
+    background-color: #393C4D;
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem 0;
+}
+
+/* Nav Styling */
+nav{
+    background-color: #393C4D;
+    padding: 2rem;
+    border-radius: 0 15px 15px 0 ;
+}
+nav h1{
+    color: #06CA92; 
+    font-size: 2rem;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 2rem;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: 2rem;
+}
+
+.list-item:nth-child(2){
+    background: linear-gradient(to right, #04C890, #44DCB1);
+}
+
+.list-item:hover{
+    background: linear-gradient(to right, #04C890, #44DCB1);
+}
+
+.list-item p{
+    margin-left: 1rem;
+}
+
+/* Article Styling */
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #393C4D;
+    border-radius: 2rem;
+    padding: 1.4rem;
+}
+
+article img{
+    width: 284px;
+    border-radius: 1.4rem;
+    border: 4px solid white;
+    box-shadow: 0 0 38px rgba(0, 0, 0, 0.158);
+    margin: 1rem;
+    transition: transform .4s ease-in-out;
+    cursor: pointer;
+}
+
+article img:hover{
+    transform: scale(1.1);
+}
+
+.info{
+    margin-left: 2rem;
+}
+
+.info h1{
+    color: #04C890;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.info .description{
+    font-size: 1.4rem;
+    max-width: 43rem;
+    margin-bottom: 2rem;
+}
+
+.released, .type, .time{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.watch, .download{
+    background: linear-gradient(to right, #00fab3, #02ac7b);
+    padding: 1rem 4rem;
+    color: white;
+    border-radius: 1.4rem;
+}
+
+.watch:hover, .download:hover{
+    background: linear-gradient(to right, #02ac7b, #00fab3);
+}
+
+.watch{
+    padding: 1rem 5rem;
+    margin-left: 1rem;
+}
+.btn-info i{
+    margin-right: .5rem;
+}
+
+.btn-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* aside */
+
+aside{
+    background-color: #393C4D;
+    padding: 2rem;
+    border-radius: 15px 0 0 15px  ;
+}
+
+aside p{
+    color: #00fab3;
+    font-size: 2rem;
+}
+
+aside ul{
+    margin-bottom: 2rem;
+}
+
+aside li{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: #393C4D;
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1260px) {
+    /* nav Styling */
+    nav{
+        grid-column: span 3;
+        display: flex;
+        border-radius: 2rem;
+        margin: 0 1rem;
+    }
+    .list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .list-item{
+        margin: 0;
+    }
+
+    /* Article Styling */
+    article{
+        grid-column: span 3;
+        margin: 0 1rem;
+    }
+    .info{
+        margin-left: 10rem;
+    }
+    /* aside */
+    aside{
+        grid-column: span 3;
+        margin: 0 1rem;
+        border-radius: 2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .list-item{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* article styling */
+    article{
+        flex-direction: column;
+        text-align: center;
+    }
+    .info{
+        margin: 0;
+    }
+    .buttons{
+        justify-content: center;
+    }
+    /* footer */
+    footer{
+        padding: 2rem 0;
+    }
+}
+
