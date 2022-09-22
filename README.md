@@ -5,5 +5,5 @@ So I'm Learning Front-end Web Development and This One Of My Projects Hope You L
   - Html
   - Css
   
-Designed Using :
+- Designed Using :
   - Adobe XD
